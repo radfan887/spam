@@ -8,7 +8,7 @@ CORS(app)
 
 # تحميل النموذج (تأكد من تدريبه باستخدام Pipeline و N-grams)
 try:
-    model = pickle.load(open('unified_spam_model.pkl', 'rb'))
+    model = pickle.load(open('spam_model.pkl', 'rb'))
 except:
     print("⚠️ خطأ: تأكد من وجود ملف unified_spam_model.pkl بجانب السيرفر")
 
@@ -43,4 +43,5 @@ def predict():
 
 if __name__ == '__main__':
     # تأكد من كتابة الـ IP الصحيح هنا أو اتركها 0.0.0.0
+
     app.run(host='0.0.0.0', port=5000)
